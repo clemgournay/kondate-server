@@ -1,7 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
-const config = dotenv.config().parsed;
 
 import { DayRouter } from './src/endpoints/day.js';
 import { IngredientRouter } from './src/endpoints/ingredient.js';
@@ -10,9 +8,9 @@ import { RecipeRouter } from './src/endpoints/recipe.js';
 const app = express();
 const port = process.env.PORT || 9000;
 
-console.log(config.DB_URI)
+console.log(process.env.DB_URI)
 
-const whitelist = config.CORS_ORIGINS.split(',');
+const whitelist = process.env.CORS_ORIGINS.split(',');
 
 const corsOptions = {
   origin: whitelist
