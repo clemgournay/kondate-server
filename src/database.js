@@ -1,6 +1,5 @@
 import { MongoClient } from 'mongodb';
 import dotenv from 'dotenv';
-
 const config = dotenv.config().parsed;
 
 const client = new MongoClient(config.DB_URI);
