@@ -1,7 +1,8 @@
 {
   "type": "module",
   "scripts": {
-    "start": "nodemon main.js"
+    "start": "nodemon main.js",
+    "prod": "node main.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
