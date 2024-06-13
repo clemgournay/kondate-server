@@ -11,6 +11,7 @@ const port = process.env.PORT || 9000;
 console.log('DB URI: ' + process.env.DB_URI)
 
 const whitelist = process.env.CORS_ORIGINS.split(',');
+console.log('WHITELIST', whitelist);
 
 const corsOptions = {
   origin: whitelist
